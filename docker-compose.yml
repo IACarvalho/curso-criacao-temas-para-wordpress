@@ -1,13 +1,13 @@
 version: "3"
 services:
-    apache2:
-        image: webdevops/apache:latest
+    # apache2:
+    #     image: webdevops/apache:latest
         
-        volumes:
-            - ./php/www:/var/www/html
-        ports:
-            - 80:80
-            - 443:443
+    #     volumes:
+    #         - ./php/www:/var/www/html
+    #     ports:
+    #         - 80:80
+    #         - 443:443
     www:
         build: .
         ports: 
