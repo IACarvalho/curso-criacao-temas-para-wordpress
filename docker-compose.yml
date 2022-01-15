@@ -22,8 +22,7 @@ services:
             - POSTGRES_PASSWORD=postgres
             - PGPORT=5432
         volumes:
-            - ./dump:/database/pg/data:/var/lib/postgresql/data 
-            - persistent:/var/lib/postgresql/data
+            - ./database/pg/data:/var/lib/postgresql/data
         networks:
             - default
     phpmyadmin:

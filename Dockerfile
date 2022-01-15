@@ -1,3 +1,9 @@
 FROM php:7.4.0-apache 
-# RUN docker-php-ext-install mysqli
-RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo pdo_pgsql
+
+RUN apt-get update
+
+# Install Postgre PDO
+RUN apt-get install -y libpq-dev
+RUN docker-php-ext-install pdo  
+RUN docker-php-ext-install pdo_pgsql
+RUN docker-php-ext-install pgsql
